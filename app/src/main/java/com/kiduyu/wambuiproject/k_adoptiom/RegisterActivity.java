@@ -21,4 +21,8 @@ public class RegisterActivity extends AppCompatActivity {
     public void login(View view) {
         startActivity(new Intent(this, LoginActivity.class));
     }
+
+    public void toHome(View view) {
+        startActivity(new Intent(this, HomeActivity.class));
+    }
 }

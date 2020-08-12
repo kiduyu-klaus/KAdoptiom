@@ -109,6 +109,7 @@
                 style="@style/SolidButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_below="@id/divider"
+                android:onClick="toHome"
                 android:backgroundTint="@color/fb_blue"
                 android:text="@string/signup_fb_btn_label"
                 android:textSize="16sp" />
