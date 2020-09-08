@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        style="@style/ToolbarStyle">
-
-    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:id="@+id/containerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:layout_margin="@dimen/container_layout_margin">
+        android:layout_margin="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
 
         <TextView
             android:id="@+id/login_title"
@@ -31,39 +31,84 @@
             android:layout_marginTop="@dimen/layout_in_between_margins"
             android:text="@string/login_welcome_txt" />
 
-        <EditText
-            android:id="@+id/et_email_address"
-            style="@style/EditTextStyle"
-            android:layout_below="@id/login_welcome_msg"
-            android:layout_marginTop="@dimen/layout_in_between_margins"
-            android:hint="@string/email_address_hint"
-            android:inputType="textEmailAddress" />
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/login_welcome_msg" />
 
-        <EditText
-            android:id="@+id/et_password"
-            style="@style/EditTextStyle"
-            android:layout_below="@id/et_email_address"
-            android:layout_marginTop="@dimen/layout_in_between_margins"
-            android:hint="@string/password_hint"
-            android:inputType="textPassword" />
+        <LinearLayout
+            android:id="@+id/formilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/forgot_password"
-            style="@style/LabelStyle"
-            android:layout_below="@id/et_password"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/layout_in_between_margins"
-            android:fontFamily="@font/sf_pro_display_medium"
-            android:text="@string/forgot_password"
-            android:textColor="@color/orange"
-            android:textSize="16sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobile_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimaryDark">
+
+                <EditText
+                    android:id="@+id/number_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_horizontal_margin"
+                    android:hint="Mobile Number"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:padding="@dimen/default_horizontal_margin"
+                    android:text="254889"
+                    android:textColor="@color/colorRad" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColorHint="@color/colorPrimaryDark"
+                custom:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_horizontal_margin"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:padding="@dimen/default_horizontal_margin"
+                    android:text="1234"
+                    android:textColor="@color/colorRad"
+                    android:textColorHint="@color/colorPrimaryDark" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_horizontal_margin"
+
+                android:gravity="end"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/remember_me_chkb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Remember me"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_login"
             style="@style/SolidButtonStyle"
             android:layout_width="match_parent"
-            android:layout_below="@id/forgot_password"
+            android:layout_below="@id/formilo"
             android:layout_marginTop="@dimen/layout_in_between_margins"
+            android:onClick="LoginToapp"
             android:text="@string/login_btn_label" />
 
         <RelativeLayout
@@ -114,9 +159,14 @@
             android:backgroundTint="@color/fb_blue"
             android:text="@string/login_fb_btn_label"
             android:textSize="16sp" />
-
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/btn_login_fb"/>
 
         <RelativeLayout
+            android:layout_above="@+id/view2"
             android:id="@+id/sign_up_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -144,4 +194,4 @@
     </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

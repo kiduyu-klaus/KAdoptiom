@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "521071374907",
+    "firebase_url": "https://k-adoptiom.firebaseio.com",
+    "project_id": "k-adoptiom",
+    "storage_bucket": "k-adoptiom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521071374907:android:ce51a126956470f003221e",
+        "android_client_info": {
+          "package_name": "com.kiduyu.wambuiproject.k_adoptiom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521071374907-2t2oco15jj2pe9dt8i3lefbmbigqea5a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kiduyu.wambuiproject.k_adoptiom",
+            "certificate_hash": "430f439c9f141977457972fbfa541c97cc72762e"
+          }
+        },
+        {
+          "client_id": "521071374907-pjmtsb6hjkh03npfabc60rcts2k7g306.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBehwfJDJr0QoaAzQ8i3GnZG4FVpJ3WP8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521071374907-pjmtsb6hjkh03npfabc60rcts2k7g306.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

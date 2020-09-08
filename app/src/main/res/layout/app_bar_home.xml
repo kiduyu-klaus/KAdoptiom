@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/layoutid"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     tools:context=".HomeActivity">
@@ -17,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             app:elevation="0dp"
-            android:background="@drawable/rounded_actionbar"
             android:theme="@style/AppTheme.AppBarOverlay">
 
             <androidx.appcompat.widget.Toolbar
@@ -84,7 +84,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
             android:background="#FFFFFF"
             android:fillViewport="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -100,23 +99,5 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:paddingBottom="10dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
-            android:id="@+id/lvl_hidecart"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:gravity="center|left">
-        </LinearLayout>
-
-
-
-    </RelativeLayout>
 </RelativeLayout>
