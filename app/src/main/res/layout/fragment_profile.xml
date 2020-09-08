@@ -125,7 +125,7 @@
                     android:background="@color/line_detail" />
 
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -138,7 +138,15 @@
                         android:minWidth="@dimen/splash_btn_width"
                         android:text="@string/profile_save"
                         android:textSize="14sp" />
-                </LinearLayout>
+
+                    <Button
+                        android:id="@+id/edt_profile_save"
+                        style="@style/StrokeButtonStyle"
+                        android:minWidth="@dimen/splash_btn_width"
+                        android:text="Save Details"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
 
             </LinearLayout>
         </ScrollView>
