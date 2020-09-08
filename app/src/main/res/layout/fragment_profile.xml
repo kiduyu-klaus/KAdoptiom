@@ -37,14 +37,7 @@
                 android:padding="15dp">
 
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="25dp"
-                    android:background="@color/line_detail" />
-
-                <TextView
+              <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -53,21 +46,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/edt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="3dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:lines="1"
                     android:textColor="@color/gray"
                     android:textSize="14sp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/line_detail" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,21 +66,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="3dp"
                     android:layout_marginTop="5dp"
+                    android:lines="1"
                     android:textColor="@color/gray"
                     android:textSize="14sp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/line_detail" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -103,7 +86,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/edt_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -111,16 +94,11 @@
                     android:layout_marginTop="5dp"
                     android:textColor="@color/gray"
                     android:text="******"
+                    android:lines="1"
+                    android:inputType="textPassword"
                     android:textSize="14sp" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/line_detail" />
-
-                <TextView
+                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -129,12 +107,13 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <EditText
                     android:id="@+id/edt_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="3dp"
                     android:layout_marginTop="5dp"
+                    android:lines="1"
                     android:textColor="@color/gray"
                     android:textSize="14sp" />
 
@@ -154,7 +133,7 @@
                     android:gravity="center"
                     >
                     <Button
-                        android:id="@+id/btn_login"
+                        android:id="@+id/edt_profile"
                         style="@style/StrokeButtonStyle"
                         android:minWidth="@dimen/splash_btn_width"
                         android:text="@string/profile_save"

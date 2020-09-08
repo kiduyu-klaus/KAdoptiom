@@ -8,8 +8,9 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_fragment"
         android:layout_width="match_parent"
+        app:titleTextColor="@color/colorRad"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
