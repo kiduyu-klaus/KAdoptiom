@@ -50,6 +50,8 @@ dependencies {
     //mpesa
     implementation 'com.androidstudy:daraja:1.0.2'
 
+    implementation 'com.github.ornolfr:rating-view:0.1.2@aar'
+
 
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
     implementation 'androidx.navigation:navigation-ui:2.0.0'

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kiduyu.wambuiproject.k_adoptiom">
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".LoginActivity"
-            android:theme="@style/AppThemeAction"/>
-        <activity android:name=".RegisterActivity"
-            android:theme="@style/AppThemeAction"/>
+        <activity android:name=".KidsActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppThemeAction" />
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppThemeAction" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
