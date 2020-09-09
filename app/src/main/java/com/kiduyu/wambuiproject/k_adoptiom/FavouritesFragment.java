@@ -64,13 +64,16 @@ public class FavouritesFragment extends Fragment {
                 holder.kidsage.setText("Age: " + model.getKidage());
                 holder.kidsgender.setText("Gender: " + model.getKidgender());
                 holder.kidslocation.setText("Location: " + model.getKidlocation());
-                holder.favourite.setOnClickListener(new View.OnClickListener() {
+                holder.favourite.setVisibility(View.GONE);
+               /* holder.favourite.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(getActivity(), "Aleady Added", Toast.LENGTH_SHORT).show();
 
                     }
                 });
+
+                */
                 holder.lyt_parent.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
