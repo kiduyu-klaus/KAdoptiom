@@ -102,6 +102,19 @@ public class KidsActivity extends AppCompatActivity {
                                     AddToFavourite(model.getName(), model.getAge(), model.getAgency(), model.getDescription(), model.getLocation(), model.getImage());
                                 }
                             });
+                            holder.lyt_parent.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent= new Intent(KidsActivity.this,KidDetails.class);
+                                    intent.putExtra("kidsname",model.getName());
+                                    intent.putExtra("kidsage",model.getAge());
+                                    intent.putExtra("kidslocation",model.getLocation());
+                                    intent.putExtra("image",model.getImage());
+                                    intent.putExtra("gender",model.getGender());
+                                    intent.putExtra("description",model.getDescription());
+                                    startActivity(intent);
+                                }
+                            });
                         } else {
                             progressBar.setVisibility(View.INVISIBLE);
                             Toast.makeText(KidsActivity.this, "none", Toast.LENGTH_SHORT).show();
