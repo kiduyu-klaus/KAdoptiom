@@ -95,7 +95,7 @@ public class KidsActivity extends AppCompatActivity {
                             holder.kidsname.setText(model.getName());
                             holder.kidsage.setText("Age: " + model.getAge());
                             holder.kidsgender.setText("Gender: " + model.getGender());
-                            holder.kidslocation.setText("Location: " + model.getGender());
+                            holder.kidslocation.setText("Location: " + model.getLocation());
                             holder.favourite.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
@@ -211,7 +211,7 @@ public class KidsActivity extends AppCompatActivity {
                             holder.kidsname.setText(model.getName());
                             holder.kidsage.setText("Age: " + model.getAge());
                             holder.kidsgender.setText("Gender: " + model.getGender());
-                            holder.kidslocation.setText("Location: " + model.getGender());
+                            holder.kidslocation.setText("Location: " + model.getLocation());
                             holder.favourite.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
