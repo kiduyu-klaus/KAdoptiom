@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -99,7 +100,7 @@ public class KidsActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                     progressBar.setVisibility(View.VISIBLE);
-                                    AddToFavourite(model.getName(), model.getAge(), model.getAgency(), model.getDescription(), model.getLocation(), model.getImage());
+                                    AddToFavourite(model.getName(), model.getAge(),model.getGender(), model.getAgency(), model.getDescription(), model.getLocation(), model.getImage());
                                 }
                             });
                             holder.lyt_parent.setOnClickListener(new View.OnClickListener() {
@@ -147,16 +148,17 @@ public class KidsActivity extends AppCompatActivity {
         adapter.startListening();
     }
 
-    private void AddToFavourite(final String name, final String age, final String agency, final String description, final String location, final String image) {
+    private void AddToFavourite(final String name, final String age, final String gender, final String agency, final String description, final String location, final String image) {
 
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String uniqueid= Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
-                Favourite favourite = new Favourite(name, age, agency, description, location, image);
-                RootRef.child("Favourites").child(name).setValue(favourite).addOnCompleteListener(new OnCompleteListener<Void>() {
+                Favourite favourite = new Favourite(name, age,gender, agency, description, location, image);
+                RootRef.child("Favourites").child(uniqueid).child(name).setValue(favourite).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
@@ -214,7 +216,7 @@ public class KidsActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                     progressBar.setVisibility(View.VISIBLE);
-                                    AddToFavourite(model.getName(), model.getAge(), model.getAgency(), model.getDescription(), model.getLocation(), model.getImage());
+                                    AddToFavourite(model.getName(), model.getAge(),model.getGender(), model.getAgency(), model.getDescription(), model.getLocation(), model.getImage());
                                 }
                             });
 

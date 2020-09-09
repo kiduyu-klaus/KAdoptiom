@@ -1,18 +1,27 @@
 package com.kiduyu.wambuiproject.k_adoptiom;
 
 public class Favourite {
-    String kidname,kidage,kidagency,kiddescription,kidlocation,kidimage;
+    String kidname,kidage,kidgender,kidagency,kiddescription,kidlocation,kidimage;
     public Favourite (){
 
     }
 
-    public Favourite(String kidname, String kidage, String kidagency, String kiddescription, String kidlocation, String kidimage) {
+    public Favourite(String kidname, String kidage, String kidgender, String kidagency, String kiddescription, String kidlocation, String kidimage) {
         this.kidname = kidname;
         this.kidage = kidage;
+        this.kidgender = kidgender;
         this.kidagency = kidagency;
         this.kiddescription = kiddescription;
         this.kidlocation = kidlocation;
         this.kidimage = kidimage;
+    }
+
+    public String getKidgender() {
+        return kidgender;
+    }
+
+    public void setKidgender(String kidgender) {
+        this.kidgender = kidgender;
     }
 
     public String getKidname() {

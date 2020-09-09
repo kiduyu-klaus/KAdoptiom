@@ -50,6 +50,9 @@ public class KidDetails extends AppCompatActivity {
 
         TextView location_tv = findViewById(R.id.details_location);
         location_tv.setText(kidslocation);
+
+        TextView desc_tv = findViewById(R.id.details_desr);
+        desc_tv.setText(descr);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
