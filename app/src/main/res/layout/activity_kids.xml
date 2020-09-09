@@ -3,11 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/tv_kids"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="Filter"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/kid_male"
+            android:background="@drawable/rounded_filter"
+            android:textColor="#ffff"
+            android:onClick="FilterByMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:text="Male"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/kid_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"
+            android:onClick="FilterByFemale"
+            android:background="@drawable/rounded_filter"
+            android:textColor="#ffff"
+            android:text="Female"
+            android:textSize="20sp" />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/kids_recyclerview"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="4dp" />
+        android:layout_below="@+id/tv_kids" />
 
     <ProgressBar
         android:id="@+id/progressBar_kids"
